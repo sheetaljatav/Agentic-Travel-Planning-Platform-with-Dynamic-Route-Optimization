@@ -1,13 +1,9 @@
 # Render Blueprint — one-click FREE deploy.
 # In Render: New > Blueprint > connect this repo > Apply.
-# Provisions a free Postgres + a single web service that serves BOTH the
-# FastAPI API and the built React app (one URL, no CORS).
-databases:
-  - name: travel-db
-    plan: free
-    databaseName: travel
-    user: travel
-
+# A single free web service serves BOTH the FastAPI API and the built React app
+# (one URL, no CORS). It uses SQLite by default so it deploys on the free tier
+# without a managed database (Render allows only one free Postgres per account).
+# For persistent Postgres, set DATABASE_URL below to a free Neon/Supabase URL.
 services:
   - type: web
     name: agentic-travel-planner
@@ -18,9 +14,7 @@ services:
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: travel-db
-          property: connectionString
+        value: sqlite+aiosqlite:///./travel.db
       - key: CORS_ORIGINS
         value: "*"
       # Optional API keys — add in the Render dashboard to upgrade data quality.
