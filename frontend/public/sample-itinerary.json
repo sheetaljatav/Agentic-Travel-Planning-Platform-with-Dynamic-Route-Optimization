@@ -1,0 +1,308 @@
+{
+  "trip_id": "demo-sample",
+  "request": {
+    "raw_query": "Plan a 4-day Goa trip under 25000 from Bangalore",
+    "origin": "Bangalore",
+    "destination": "Goa",
+    "days": 4,
+    "start_date": null,
+    "travelers": 2,
+    "budget_cap": 25000.0,
+    "currency": "INR",
+    "budget_level": "budget",
+    "transport_mode": "rail",
+    "interests": []
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": null,
+      "weather": {
+        "date": "2026-06-18",
+        "summary": "Mainly clear",
+        "temp_min_c": 19.0,
+        "temp_max_c": 27.4,
+        "precipitation_mm": 0.0
+      },
+      "stops": [
+        {
+          "name": "Chandor",
+          "location": {
+            "lat": 15.264444444444445,
+            "lng": 74.04777777777778
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        },
+        {
+          "name": "Menezes Braganza House",
+          "location": {
+            "lat": 15.26153,
+            "lng": 74.04346
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        }
+      ],
+      "travel_time_min": 1.2
+    },
+    {
+      "day": 2,
+      "date": null,
+      "weather": {
+        "date": "2026-06-19",
+        "summary": "Clear sky",
+        "temp_min_c": 20.5,
+        "temp_max_c": 29.4,
+        "precipitation_mm": 0.0
+      },
+      "stops": [
+        {
+          "name": "Curchorem",
+          "location": {
+            "lat": 15.260277777777778,
+            "lng": 74.10833333333333
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        },
+        {
+          "name": "Sanvordekar Wada",
+          "location": {
+            "lat": 15.268546,
+            "lng": 74.108177
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        }
+      ],
+      "travel_time_min": 2.0
+    },
+    {
+      "day": 3,
+      "date": null,
+      "weather": {
+        "date": "2026-06-20",
+        "summary": "Clear sky",
+        "temp_min_c": 21.6,
+        "temp_max_c": 32.1,
+        "precipitation_mm": 0.0
+      },
+      "stops": [
+        {
+          "name": "Sanvordem",
+          "location": {
+            "lat": 15.27,
+            "lng": 74.12
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        },
+        {
+          "name": "Goa, Daman and Diu",
+          "location": {
+            "lat": 15.333333333333334,
+            "lng": 74.08333333333333
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        }
+      ],
+      "travel_time_min": 17.3
+    },
+    {
+      "day": 4,
+      "date": null,
+      "weather": {
+        "date": "2026-06-21",
+        "summary": "Overcast",
+        "temp_min_c": 24.0,
+        "temp_max_c": 32.4,
+        "precipitation_mm": 0.0
+      },
+      "stops": [
+        {
+          "name": "Conxem",
+          "location": {
+            "lat": 15.350833333333332,
+            "lng": 74.07111111111111
+          },
+          "category": "attraction",
+          "xid": null,
+          "rating": null,
+          "fee": null,
+          "description": null,
+          "source": "wikipedia"
+        }
+      ],
+      "travel_time_min": 0.0
+    }
+  ],
+  "budget": {
+    "intercity_transport": 4800.0,
+    "lodging": 4500.0,
+    "local_transport": 902.04,
+    "attractions": 2000.0,
+    "food": 4800.0,
+    "buffer": 1700.2,
+    "total": 18702.24,
+    "currency": "INR",
+    "within_cap": true,
+    "sources": {
+      "intercity_transport": "heuristic",
+      "lodging": "heuristic",
+      "local_transport": "derived",
+      "attractions": "heuristic",
+      "food": "heuristic"
+    }
+  },
+  "bookings": [
+    {
+      "type": "transport",
+      "title": "Rail · Bangalore → Goa",
+      "provider": "IRCTC",
+      "url": "https://www.irctc.co.in/nget/train-search",
+      "price": 4800.0,
+      "currency": "INR",
+      "note": "Round trip estimate"
+    },
+    {
+      "type": "hotel",
+      "title": "Stay in Goa (budget tier)",
+      "provider": "Booking.com",
+      "url": "https://www.booking.com/searchresults.html?ss=Goa&checkin=2026-06-18&group_adults=2",
+      "price": 4500.0,
+      "currency": "INR",
+      "note": "3 night(s)"
+    },
+    {
+      "type": "attraction",
+      "title": "Plan a visit: Chandor",
+      "provider": "Local operators",
+      "url": "https://www.google.com/search?q=Chandor+tickets",
+      "price": null,
+      "currency": null,
+      "note": "Top-rated attraction on the optimized route"
+    }
+  ],
+  "weather": [
+    {
+      "date": "2026-06-18",
+      "summary": "Mainly clear",
+      "temp_min_c": 19.0,
+      "temp_max_c": 27.4,
+      "precipitation_mm": 0.0
+    },
+    {
+      "date": "2026-06-19",
+      "summary": "Clear sky",
+      "temp_min_c": 20.5,
+      "temp_max_c": 29.4,
+      "precipitation_mm": 0.0
+    },
+    {
+      "date": "2026-06-20",
+      "summary": "Clear sky",
+      "temp_min_c": 21.6,
+      "temp_max_c": 32.1,
+      "precipitation_mm": 0.0
+    },
+    {
+      "date": "2026-06-21",
+      "summary": "Overcast",
+      "temp_min_c": 24.0,
+      "temp_max_c": 32.4,
+      "precipitation_mm": 0.0
+    }
+  ],
+  "total_cost": 18702.24,
+  "within_budget": true,
+  "summary": "4-day Goa itinerary from Bangalore for 2 traveler(s): 7 attractions over 4 days, estimated INR 18,702 (within the INR 25,000 budget).",
+  "agent_runs": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "latency_ms": 2.95,
+      "detail": "Bangalore->Goa, 4d"
+    },
+    {
+      "agent": "places",
+      "status": "ok",
+      "latency_ms": 857.48,
+      "detail": "8 attractions"
+    },
+    {
+      "agent": "weather",
+      "status": "ok",
+      "latency_ms": 2003.95,
+      "detail": "4-day forecast"
+    },
+    {
+      "agent": "routing",
+      "status": "ok",
+      "latency_ms": 0.38,
+      "detail": "8 stops, 24.3 km"
+    },
+    {
+      "agent": "budget",
+      "status": "ok",
+      "latency_ms": 0.1,
+      "detail": "INR 45,171 vs cap 25,000"
+    },
+    {
+      "agent": "trim",
+      "status": "ok",
+      "latency_ms": 0.04,
+      "detail": "air->rail, tier->budget, dropped Panchawadi"
+    },
+    {
+      "agent": "routing",
+      "status": "ok",
+      "latency_ms": 0.8,
+      "detail": "7 stops, 20.1 km"
+    },
+    {
+      "agent": "budget",
+      "status": "ok",
+      "latency_ms": 0.1,
+      "detail": "INR 18,702 vs cap 25,000"
+    },
+    {
+      "agent": "booking",
+      "status": "ok",
+      "latency_ms": 0.11,
+      "detail": "3 suggestions"
+    },
+    {
+      "agent": "assemble",
+      "status": "ok",
+      "latency_ms": 0.1,
+      "detail": null
+    }
+  ],
+  "created_at": "2026-06-18T08:32:39.435124Z"
+}
