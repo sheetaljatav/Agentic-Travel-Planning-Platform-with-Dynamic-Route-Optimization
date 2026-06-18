@@ -1,8 +1,8 @@
 name: Deploy frontend to GitHub Pages
 
-# Builds the React app in demo mode (bundled sample itinerary, no backend needed)
-# and publishes it to GitHub Pages. One-time setup: repo Settings > Pages >
-# Source = "GitHub Actions".
+# Builds the React app pointed at the live Render backend and publishes it to
+# GitHub Pages. The bundled sample itinerary remains a fallback if the backend
+# is unreachable. One-time setup: repo Settings > Pages > Source = "GitHub Actions".
 
 on:
   push:
@@ -29,10 +29,12 @@ jobs:
       - name: Install
         working-directory: frontend
         run: npm ci || npm install
-      - name: Build (demo mode + Pages base path)
+      - name: Build (live backend + Pages base path)
         working-directory: frontend
         env:
-          VITE_DEMO: "1"
+          # Point Pages at the live Render backend; the bundled sample remains a
+          # fallback if the (free, sleep-prone) backend is unreachable.
+          VITE_API_URL: "https://agentic-travel-planner-3z7m.onrender.com"
           VITE_BASE: "/Agentic-Travel-Planning-Platform-with-Dynamic-Route-Optimization/"
         run: npm run build
       - uses: actions/configure-pages@v5
